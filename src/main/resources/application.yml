@@ -1,0 +1,7 @@
+server:
+  port: 9090
+rocketmq:
+  producer:
+    group: OrderGroup
+  name:
+    addr: 0.0.0.0:9876
