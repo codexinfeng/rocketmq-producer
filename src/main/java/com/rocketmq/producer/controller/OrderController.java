@@ -11,7 +11,6 @@ import com.rocketmq.producer.model.OrderInfo;
 import com.rocketmq.producer.service.OrderService;
 
 /**
- * @author zhangxianbin
  *
  *         2020年5月26日
  */
@@ -25,6 +24,17 @@ public class OrderController {
 	@PostMapping(value = { "/createOrder" })
 	public String createOrder(@RequestBody OrderInfo info) {
 		orderService.createOrder(info);
+		return "success";
+	}
+	
+	@PostMapping(value = { "/createTransactionOrder" })
+	public String createTransactionOrder(OrderInfo info) {
+		orderService.createTransactionMsg();
+		return "success";
+	}
+	@PostMapping(value = { "/createAsyncOrder" })
+	public String createAsyncOrder(OrderInfo info) {
+		orderService.createAsyncOrder(info);
 		return "success";
 	}
 }

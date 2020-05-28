@@ -1,7 +1,6 @@
 package com.rocketmq.producer.model;
 
 /**
- * @author zhangxianbin
  *
  *         2020年5月26日
  */
@@ -35,6 +34,11 @@ public class OrderInfo {
 
 	public void setOrderId(String orderId) {
 		this.orderId = orderId;
+	}
+
+	@Override
+	public String toString() {
+		return "orderId = " + orderId + ",productName = " + productName + ",price = " + price;
 	}
 
 }

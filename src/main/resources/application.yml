@@ -4,4 +4,6 @@ rocketmq:
   producer:
     group: OrderGroup
   name:
-    addr: 0.0.0.0:9876
+    addr: 122.51.255.251:9876
+  transaction:
+    group: TransactionGroup
